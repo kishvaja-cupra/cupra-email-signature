@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Create a standard CUPRA and SEAT UK corporate email signature.">
+  <title>Email Signature Generator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="page-header">
+      <p class="eyebrow">SEAT (UK)</p>
+      <h1>Email signature generator</h1>
+      <p>Enter your details, choose the products you look after, then copy the finished signature into Outlook.</p>
+    </header>
+
+    <div class="workspace">
+      <section class="panel form-panel" aria-labelledby="details-heading">
+        <div class="panel-heading">
+          <span class="step">1</span>
+          <div>
+            <h2 id="details-heading">Your details</h2>
+            <p>Required fields are marked with an asterisk.</p>
+          </div>
+        </div>
+
+        <form id="signature-form" novalidate>
+          <div class="field">
+            <label for="name">Name <span aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" required placeholder="e.g. Kish Vaja">
+            <p class="field-error" id="name-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="job-title">Job title <span aria-hidden="true">*</span></label>
+            <input id="job-title" name="jobTitle" type="text" autocomplete="organization-title" required placeholder="e.g. Product Manager">
+            <p class="field-error" id="job-title-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="phone">Mobile number <span class="optional">Optional</span></label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+44 (0) 7777 111 222" aria-describedby="phone-help phone-error">
+            <p class="field-help" id="phone-help">Enter in the format: +44 (0) 7777 111 222</p>
+            <p class="field-error" id="phone-error" aria-live="polite"></p>
+          </div>
+
+          <fieldset>
+            <legend>CUPRA products <span class="optional">Optional</span></legend>
+            <p class="field-help">Select all products you look after.</p>
+            <div id="cupra-products" class="checkbox-grid"></div>
+          </fieldset>
+
+          <fieldset>
+            <legend>SEAT products <span class="optional">Optional</span></legend>
+            <p class="field-help">Select all products you look after.</p>
+            <div id="seat-products" class="checkbox-grid"></div>
+          </fieldset>
+
+          <button class="secondary-button" id="reset-button" type="reset">Reset form</button>
+        </form>
+      </section>
+
+      <section class="panel preview-panel" aria-labelledby="preview-heading">
+        <div class="panel-heading">
+          <span class="step">2</span>
+          <div>
+            <h2 id="preview-heading">Preview and copy</h2>
+            <p>The preview updates as you enter your details.</p>
+          </div>
+        </div>
+
+        <div class="preview-frame">
+          <div id="signature-preview" aria-label="Email signature preview"></div>
+        </div>
+
+        <div class="actions">
+          <button class="primary-button" id="copy-button" type="button">Copy signature</button>
+          <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
+        </div>
+
+        <aside class="instructions">
+          <h3>Paste into Outlook</h3>
+          <ol>
+            <li>Select <strong>Copy signature</strong>.</li>
+            <li>Open Outlook signature settings and create a new signature.</li>
+            <li>Paste, then save.</li>
+          </ol>
+        </aside>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
