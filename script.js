@@ -61,7 +61,7 @@ function buildSignature(logoSource) {
     ? '<div style="margin-bottom:0;font-size:9px;"><span style="font-weight:bold;">M</span>&nbsp;&nbsp;' + escapeHtml(phone) + '</div>'
     : '';
 
-  return '<table role="presentation" style="color:#1d1d1b;line-height:1.4;border-collapse:collapse;" border="0" cellspacing="0" cellpadding="0">' +
+  return '<p>&nbsp;</p><table role="presentation" style="color:#1d1d1b;line-height:1.4;border-collapse:collapse;" border="0" cellspacing="0" cellpadding="0">' +
     '<tbody><tr><td style="padding:0;">' +
     '<div style="font-size:16px;font-weight:bold;color:#1d1d1b;">' + escapeHtml(name) + '</div>' +
     '<div style="font-size:9px;color:#666666;margin-bottom:12px;">' + escapeHtml(jobTitle) + '</div>' +
@@ -77,7 +77,7 @@ function buildSignature(logoSource) {
     '<span style="color:#666666;"> | </span>' +
     '<a href="https://www.seat.co.uk" style="color:#ff0036;text-decoration:none;" target="_blank" rel="noopener noreferrer">SEAT</a>' +
     '</div>' +
-    '</td></tr></tbody></table>';
+    '</td></tr></tbody></table><p>&nbsp;</p>';
 }
 
 function validateField(input, errorId, message) {
