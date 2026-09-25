@@ -69,7 +69,7 @@ function buildSignature(logoSource) {
     buildProductRow('SEAT', seat) +
     phoneRow +
     '<div style="height:1px;border-bottom:1px solid #a68a64;margin:0 0 16px 0;">&nbsp;</div>' +
-    '<div style="margin:0 0 9px 0;"><img src="' + logoSource + '" width="156" height="66" alt="CUPRA and SEAT" style="display:block;width:244px;height:95px;border:0;outline:none;text-decoration:none;"></div>' +
+    '<div style="margin:0 0 9px 0;"><img src="' + logoSource + '" width="156" height="66" alt="CUPRA and SEAT" style="display:block;width:156px;height:66px;border:0;outline:none;text-decoration:none;"></div>' +
     '<div style="font-weight:bold;font-size:9px;color:#1d1d1b;margin-bottom:0;">CUPRA & SEAT UK</div>' +
     '<div style="font-size:9px;color:#666666;">Yeomans Drive, Blakelands, Milton Keynes MK14 5AN</div>' +
     '<div style="font-size:9px;margin-top:8px;">' +
