@@ -72,7 +72,7 @@ function buildSignature(logoSource) {
     '<div style="margin:0 0 9px 0;"><img src="' + logoSource + '" width="156" height="66" alt="CUPRA and SEAT" style="display:block;width:156px;height:66px;border:0;outline:none;text-decoration:none;"></div>' +
     '<div style="font-weight:bold;font-size:12px;color:#1d1d1b;margin-bottom:0;">CUPRA & SEAT UK</div>' +
     '<div style="font-size:12px;color:#666666;">Yeomans Drive, Blakelands, Milton Keynes MK14 5AN</div>' +
-    '<div style="font-size:12px;margin-top:8px;">' +
+    '<div style="font-size:12px;font-weight:bold;margin-top:8px;">' +
     '<a href="https://www.cupraofficial.co.uk" style="color:#474852;text-decoration:none;" target="_blank" rel="noopener noreferrer">CUPRA</a>' +
     '<span style="color:#666666;"> | </span>' +
     '<a href="https://www.seat.co.uk" style="color:#ff0036;text-decoration:none;" target="_blank" rel="noopener noreferrer">SEAT</a>' +
