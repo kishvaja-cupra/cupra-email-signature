@@ -61,7 +61,7 @@ function buildSignature(logoSource) {
     ? '<div style="margin-bottom:0;font-size:12px;"><span style="font-weight:bold;">M</span>&nbsp;&nbsp;' + escapeHtml(phone) + '</div>'
     : '';
 
-  return '<p>&nbsp;</p><table role="presentation" style="font-family:"Cupra", Aptos, Arial, sans-serif;color:#1d1d1b;line-height:1.4;border-collapse:collapse;" border="0" cellspacing="0" cellpadding="0">' +
+  return '<p>&nbsp;</p><table role="presentation" style="font-family:Cupra, Aptos, Arial, sans-serif;color:#1d1d1b;line-height:1.4;border-collapse:collapse;" border="0" cellspacing="0" cellpadding="0">' +
     '<tbody><tr><td style="padding:0;">' +
     '<div style="font-size:20px;font-weight:bold;color:#1d1d1b;">' + escapeHtml(name) + '</div>' +
     '<div style="font-size:12px;color:#666666;margin-bottom:12px;">' + escapeHtml(jobTitle) + '</div>' +
