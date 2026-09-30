@@ -63,8 +63,8 @@ function buildSignature(logoSource) {
 
   return '<p>&nbsp;</p><table role="presentation" style="font-family:Cupra, Aptos, Arial, sans-serif;color:#1d1d1b;line-height:1.4;border-collapse:collapse;" border="0" cellspacing="0" cellpadding="0">' +
     '<tbody><tr><td style="padding:0;">' +
-    '<div style="font-size:20px;font-weight:bold;color:#1d1d1b;">' + escapeHtml(name) + '</div>' +
-    '<div style="font-size:12px;color:#666666;margin-bottom:12px;">' + escapeHtml(jobTitle) + '</div>' +
+    '<div style="font-size:20px;font-weight:bold;color:#1d1d1b;text-transform:capitalize;">' + escapeHtml(name) + '</div>' +
+    '<div style="font-size:12px;color:#666666;margin-bottom:12px;text-transform:capitalize;">' + escapeHtml(jobTitle) + '</div>' +
     buildProductRow('CUPRA', cupra) +
     buildProductRow('SEAT', seat) +
     phoneRow +
