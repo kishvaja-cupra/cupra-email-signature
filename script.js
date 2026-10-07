@@ -73,7 +73,7 @@ function buildSignature(logoSource) {
     : '';
   
   const availabilityRow = availabilityNote
-  ? '<div style="font-size:11px;color:#666666;font-style:italic;margin-top:10px;">'
+  ? '<div style="font-size:11px;color:#666666;font-style:italic;margin-top:10px;"><span style="font-weight:bold;">Working hours / Upcoming leave</span><br>'
       + escapeHtml(availabilityNote).replace(/\n/g, '<br>')
       + '</div>'
   : '';
