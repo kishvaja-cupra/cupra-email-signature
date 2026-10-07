@@ -69,7 +69,7 @@ function buildSignature(logoSource) {
   const availabilityNote = availabilityNoteInput?.value.trim() || '';
 
   const phoneRow = phone
-    ? '<tr style="height:20px"><td><div style="font-size:12px;"><span style="font-weight:bold;">M</span>&nbsp;&nbsp;' + escapeHtml(phone) + '</td></tr></div>'
+    ? '<tr style="height:30px"><td><div style="font-size:12px;"><span style="font-weight:bold;">M</span>&nbsp;&nbsp;' + escapeHtml(phone) + '</td></tr></div>'
     : '';
   
   const availabilityRow = availabilityNote
@@ -81,13 +81,13 @@ function buildSignature(logoSource) {
   return '<p>&nbsp;</p><table role="presentation" style="font-family:Cupra, Aptos, Arial, sans-serif;color:#1d1d1b;line-height:1.4;border-collapse:collapse;" border="0" cellspacing="0" cellpadding="0">' +
     '<tbody><tr><td style="padding:0;">' +
     '<tr><td><div style="font-size:20px;font-weight:bold;color:#1d1d1b;text-transform:capitalize;">' + escapeHtml(name) + '</div></td></tr>' +
-    '<tr style="height:30px"><td><div style="font-size:12px;color:#666666;margin-bottom:12px;text-transform:capitalize;">' + escapeHtml(jobTitle) + '</div></td></tr>' +
+    '<tr style="height:30px;vertical-align:top"><td><div style="font-size:12px;color:#666666;text-transform:capitalize;">' + escapeHtml(jobTitle) + '</div></td></tr>' +
     buildProductRow('CUPRA', cupra) +
     buildProductRow('SEAT', seat) +
     buildCustomResponsibilities(customProducts) +
     phoneRow +
-    '<tr style="border-bottom:1px solid #a68a64"><td><div style="height:1px;border-bottom:1px solid #a68a64;margin:0 0 16px 0">&nbsp;</div></td></tr>' +
-    '<tr><td><div style="margin:0 0 9px 0;"><img src="' + logoSource + '" width="156" height="66" alt="CUPRA and SEAT" style="display:block;width:156px;height:66px;border:0;outline:none;text-decoration:none;"></div></td></tr>' +
+    '<tr style="border-bottom:1px solid #a68a64"><td>&nbsp;</td></tr>' +
+    '<tr><td><div><img src="' + logoSource + '" width="156" height="66" alt="CUPRA and SEAT" style="display:block;width:156px;height:66px;border:0;outline:none;text-decoration:none;"></div></td></tr>' +
     '<tr style="height:20px"><td><div style="font-weight:bold;font-size:12px;color:#1d1d1b;margin-bottom:0;">CUPRA & SEAT UK</div></td></tr>' +
     '<tr style="height:20px"><td><div style="font-size:12px;color:#666666;">Yeomans Drive, Blakelands, Milton Keynes MK14 5AN</div></td></tr>' +
     '<tr style="height:20px"><td><div style="font-size:12px;font-weight:bold;margin-top:8px;">' +
