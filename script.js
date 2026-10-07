@@ -12,6 +12,8 @@ const form = document.querySelector('#signature-form');
 const nameInput = document.querySelector('#name');
 const jobTitleInput = document.querySelector('#job-title');
 const phoneInput = document.querySelector('#phone');
+const customProductsInput = document.querySelector('#custom-products');
+const availabilityNoteInput = document.querySelector('#availability-note');
 const preview = document.querySelector('#signature-preview');
 const copyButton = document.querySelector('#copy-button');
 const copyStatus = document.querySelector('#copy-status');
@@ -50,16 +52,31 @@ function buildProductRow(brand, products) {
     '</div>';
 }
 
+function buildCustomResponsibilities(text) {
+  if (!text) return '';
+  return '<div style="font-size:12px;margin-bottom:14px;color:#1d1d1b;">'
+    + escapeHtml(text)
+    + '</div>';
+}
+
 function buildSignature(logoSource) {
   const name = nameInput.value.trim() || 'Your name';
   const jobTitle = jobTitleInput.value.trim() || 'Your job title';
   const phone = phoneInput.value.trim();
   const cupra = selectedProducts('cupraProducts');
   const seat = selectedProducts('seatProducts');
+  const customProducts = customProductsInput?.value.trim() || '';
+  const availabilityNote = availabilityNoteInput?.value.trim() || '';
 
   const phoneRow = phone
     ? '<div style="margin-bottom:0;font-size:12px;"><span style="font-weight:bold;">M</span>&nbsp;&nbsp;' + escapeHtml(phone) + '</div>'
     : '';
+  
+  const availabilityRow = availabilityNote
+  ? '<div style="font-size:11px;color:#666666;font-style:italic;margin-top:10px;">'
+      + escapeHtml(availabilityNote).replace(/\n/g, '<br>')
+      + '</div>'
+  : '';
 
   return '<p>&nbsp;</p><table role="presentation" style="font-family:Cupra, Aptos, Arial, sans-serif;color:#1d1d1b;line-height:1.4;border-collapse:collapse;" border="0" cellspacing="0" cellpadding="0">' +
     '<tbody><tr><td style="padding:0;">' +
@@ -67,6 +84,7 @@ function buildSignature(logoSource) {
     '<div style="font-size:12px;color:#666666;margin-bottom:12px;text-transform:capitalize;">' + escapeHtml(jobTitle) + '</div>' +
     buildProductRow('CUPRA', cupra) +
     buildProductRow('SEAT', seat) +
+    buildCustomResponsibilities(customProducts) +
     phoneRow +
     '<div style="height:1px;border-bottom:1px solid #a68a64;margin:0 0 16px 0;">&nbsp;</div>' +
     '<div style="margin:0 0 9px 0;"><img src="' + logoSource + '" width="156" height="66" alt="CUPRA and SEAT" style="display:block;width:156px;height:66px;border:0;outline:none;text-decoration:none;"></div>' +
@@ -77,6 +95,7 @@ function buildSignature(logoSource) {
     '<span style="color:#000000;"> | </span>' +
     '<a href="https://www.seat.co.uk" style="color:#474852;text-decoration:none;" target="_blank" rel="noopener noreferrer">SEAT</a>' +
     '</div>' +
+    availabilityRow +
     '</td></tr></tbody></table><p>&nbsp;</p>';
 }
 
