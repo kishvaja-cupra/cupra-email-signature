@@ -46,17 +46,17 @@ function buildProductRow(brand, products) {
   if (!products.length) return '';
   const brandColour = brand === 'CUPRA' ? '#474852' : '#474852';
   const marginBottom = brand === 'CUPRA' ? '6px' : '14px';
-  return '<div style="font-size:12px;margin-bottom:' + marginBottom + ';">' +
+  return '<tr><td><div style="font-size:12px;margin-bottom:' + marginBottom + ';">' +
     '<span style="color:' + brandColour + ';font-size:12px;font-weight:bold;">&#x258C;' + brand + '</span>' +
     '<span style="color:#1d1d1b;">&nbsp;' + products.map(escapeHtml).join(' | ') + '</span>' +
-    '</div>';
+    '</td></tr></div>';
 }
 
 function buildCustomResponsibilities(text) {
   if (!text) return '';
-  return '<div style="font-size:12px;color:#1d1d1b;">'
+  return '<tr><td><div style="font-size:12px;color:#1d1d1b;">'
     + escapeHtml(text)
-    + '</div>';
+    + '</td></tr></div>';
 }
 
 function buildSignature(logoSource) {
@@ -69,32 +69,32 @@ function buildSignature(logoSource) {
   const availabilityNote = availabilityNoteInput?.value.trim() || '';
 
   const phoneRow = phone
-    ? '<div style="margin-top:14px;font-size:12px;"><span style="font-weight:bold;">M</span>&nbsp;&nbsp;' + escapeHtml(phone) + '</div>'
+    ? '<tr><td><div style="margin-top:14px;font-size:12px;"><span style="font-weight:bold;">M</span>&nbsp;&nbsp;' + escapeHtml(phone) + '</td></tr></div>'
     : '';
   
   const availabilityRow = availabilityNote
-  ? '<div style="height:1px;border-bottom:1px solid #a68a64;margin:0 0 16px 0;">&nbsp;</div><div style="font-size:11px;color:#666666;"><span style="font-weight:bold">Working hours / Upcoming leave</span><br>'
+  ? '<tr><td><div style="height:1px;border-bottom:1px solid #a68a64;margin:0 0 16px 0;">&nbsp;</div><div style="font-size:11px;color:#666666;"><span style="font-weight:bold">Working hours / Upcoming leave</span><br>'
       + escapeHtml(availabilityNote).replace(/\n/g, '<br>')
-      + '</div>'
+      + '</td></tr></div>'
   : '';
 
   return '<p>&nbsp;</p><table role="presentation" style="font-family:Cupra, Aptos, Arial, sans-serif;color:#1d1d1b;line-height:1.4;border-collapse:collapse;" border="0" cellspacing="0" cellpadding="0">' +
     '<tbody><tr><td style="padding:0;">' +
-    '<div style="font-size:20px;font-weight:bold;color:#1d1d1b;text-transform:capitalize;">' + escapeHtml(name) + '</div>' +
-    '<div style="font-size:12px;color:#666666;margin-bottom:12px;text-transform:capitalize;">' + escapeHtml(jobTitle) + '</div>' +
+    '<tr><td><div style="font-size:20px;font-weight:bold;color:#1d1d1b;text-transform:capitalize;">' + escapeHtml(name) + '</div></td></tr>' +
+    '<tr><td><div style="font-size:12px;color:#666666;margin-bottom:12px;text-transform:capitalize;">' + escapeHtml(jobTitle) + '</div></td></tr>' +
     buildProductRow('CUPRA', cupra) +
     buildProductRow('SEAT', seat) +
     buildCustomResponsibilities(customProducts) +
     phoneRow +
-    '<div style="height:1px;border-bottom:1px solid #a68a64;margin:0 0 16px 0">&nbsp;</div>' +
-    '<div style="margin:0 0 9px 0;"><img src="' + logoSource + '" width="156" height="66" alt="CUPRA and SEAT" style="display:block;width:156px;height:66px;border:0;outline:none;text-decoration:none;"></div>' +
-    '<div style="font-weight:bold;font-size:12px;color:#1d1d1b;margin-bottom:0;">CUPRA & SEAT UK</div>' +
-    '<div style="font-size:12px;color:#666666;">Yeomans Drive, Blakelands, Milton Keynes MK14 5AN</div>' +
-    '<div style="font-size:12px;font-weight:bold;margin-top:8px;">' +
+    '<tr><td><div style="height:1px;border-bottom:1px solid #a68a64;margin:0 0 16px 0">&nbsp;</div></td></tr>' +
+    '<tr><td><div style="margin:0 0 9px 0;"><img src="' + logoSource + '" width="156" height="66" alt="CUPRA and SEAT" style="display:block;width:156px;height:66px;border:0;outline:none;text-decoration:none;"></div></td></tr>' +
+    '<tr><td><div style="font-weight:bold;font-size:12px;color:#1d1d1b;margin-bottom:0;">CUPRA & SEAT UK</div></td></tr>' +
+    '<tr><td><div style="font-size:12px;color:#666666;">Yeomans Drive, Blakelands, Milton Keynes MK14 5AN</div></td></tr>' +
+    '<tr><td><div style="font-size:12px;font-weight:bold;margin-top:8px;">' +
     '<a href="https://www.cupraofficial.co.uk" style="color:#474852;text-decoration:none;" target="_blank" rel="noopener noreferrer">CUPRA</a>' +
     '<span style="color:#000000;"> | </span>' +
     '<a href="https://www.seat.co.uk" style="color:#474852;text-decoration:none;" target="_blank" rel="noopener noreferrer">SEAT</a>' +
-    '</div>' +
+    '</div></td></tr>' +
     availabilityRow +
     '</td></tr></tbody></table><p>&nbsp;</p>';
 }
