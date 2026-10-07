@@ -54,7 +54,7 @@ function buildProductRow(brand, products) {
 
 function buildCustomResponsibilities(text) {
   if (!text) return '';
-  return '<div style="font-size:12px;margin-bottom:14px;color:#1d1d1b;">'
+  return '<div style="font-size:12px;color:#1d1d1b;">'
     + escapeHtml(text)
     + '</div>';
 }
@@ -69,7 +69,7 @@ function buildSignature(logoSource) {
   const availabilityNote = availabilityNoteInput?.value.trim() || '';
 
   const phoneRow = phone
-    ? '<div style="margin-bottom:0;font-size:12px;"><span style="font-weight:bold;">M</span>&nbsp;&nbsp;' + escapeHtml(phone) + '</div>'
+    ? '<div style="margin-top:14px;font-size:12px;"><span style="font-weight:bold;">M</span>&nbsp;&nbsp;' + escapeHtml(phone) + '</div>'
     : '';
   
   const availabilityRow = availabilityNote
