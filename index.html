@@ -46,18 +46,45 @@
             <p class="field-error" id="phone-error" aria-live="polite"></p>
           </div>
 
-          <fieldset>
-            <legend>CUPRA products <span class="optional">Optional</span></legend>
-            <p class="field-help">Select all products you look after.</p>
-            <div id="cupra-products" class="checkbox-grid"></div>
-          </fieldset>
-
-          <fieldset>
-            <legend>SEAT products <span class="optional">Optional</span></legend>
-            <p class="field-help">Select all products you look after.</p>
-            <div id="seat-products" class="checkbox-grid"></div>
-          </fieldset>
-
+          <details class="accordion" open>
+            <summary>Products / Responsibilities</summary>
+            <fieldset>
+              <legend>CUPRA products <span class="optional">Optional</span></legend>
+              <p class="field-help">Select all products you look after.</p>
+              <div id="cupra-products" class="checkbox-grid"></div>
+            </fieldset>
+            <fieldset>
+              <legend>SEAT products <span class="optional">Optional</span></legend>
+              <p class="field-help">Select all products you look after.</p>
+              <div id="seat-products" class="checkbox-grid"></div>
+            </fieldset>
+            <div class="field">
+              <label for="custom-products">
+                Other responsibilities
+                <span class="optional">Optional</span>
+              </label>
+              <textarea
+                id="custom-products"
+                rows="3"
+                placeholder="e.g. Aftersales | Fleet | PR | Corporate Communications"></textarea>
+              <p class="field-help">
+                Use this if you don't manage vehicle products.
+              </p>
+            </div>
+          </details>
+          <div class="field">
+            <label for="availability-note">
+              Availability Note
+              <span class="optional">Optional</span>
+            </label>
+            <textarea
+              id="availability-note"
+              rows="3"
+              placeholder="Working days: Mon-Thu 08:30-17:00&#10;Annual leave: 15-22 December"></textarea>
+            <p class="field-help">
+              Appears beneath the company details in your signature.
+            </p>
+          </div>      
           <button class="secondary-button" id="reset-button" type="reset">Reset form</button>
         </form>
       </section>
