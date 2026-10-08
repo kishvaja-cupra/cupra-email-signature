@@ -45,8 +45,8 @@ function selectedProducts(name) {
 function buildProductRow(brand, products) {
   if (!products.length) return '';
   const brandColour = brand === 'CUPRA' ? '#474852' : '#474852';
-  const marginBottom = brand === 'CUPRA' ? '6px' : '14px';
-  return '<tr><td><p style="font-size:12px">' +
+  const marginBottom = brand === 'CUPRA' ? '5px' : '10px';
+  return '<tr><td><p style="font-size:12px;margin 0 0 ' + marginBottom '0 0">' +
     '<span style="color:' + brandColour + ';font-size:12px;font-weight:bold;">&#x258C;' + brand + '</span>' +
     '<span style="color:#1d1d1b;">&nbsp;' + products.map(escapeHtml).join(' | ') + '</span>' +
     '</p></td></tr>';
@@ -69,11 +69,11 @@ function buildSignature(logoSource) {
   const availabilityNote = availabilityNoteInput?.value.trim() || '';
 
   const phoneRow = phone
-    ? '<tr><td><p style="font-size:12px;margin:0 0 20px 0"><span style="font-weight:bold;">M</span>&nbsp;' + escapeHtml(phone) + '</p></td></tr>'
+    ? '<tr><td><p style="font-size:12px;margin:0 0 14px 0"><span style="font-weight:bold;">M</span>&nbsp;' + escapeHtml(phone) + '</p></td></tr>'
     : '';
   
   const availabilityRow = availabilityNote
-  ? '<tr><td style="border-top:1px solid #a68a64"><p style="font-size:11px;color:#666666;margin-top:10px"><span style="font-weight:bold">Working hours / Upcoming leave</span><br>'
+  ? '<tr><td style="border-top:1px solid #a68a64"><p style="font-size:11px;color:#666666;margin-top:14px"><span style="font-weight:bold">Working hours / Upcoming leave</span><br>'
       + escapeHtml(availabilityNote).replace(/\n/g, '<br>')
       + '</p></td></tr>'
   : '';
@@ -88,9 +88,9 @@ function buildSignature(logoSource) {
     phoneRow +
     '<tr><td style="border-top:1px solid #a68a64"><p style="font-size:10px;margin:0">&nbsp;</td></tr>' +
     '<tr><td><div><img src="' + logoSource + '" width="156" height="66" alt="CUPRA and SEAT" style="display:block;width:156px;height:66px;border:0;outline:none;text-decoration:none;"></div></td></tr>' +
-    '<tr><td><p style="font-weight:bold;font-size:12px;color:#1d1d1b;margin-bottom:5px;">CUPRA & SEAT UK</p></td></tr>' +
-    '<tr><td><p style="font-size:12px;color:#666666;margin-bottom:5px">Yeomans Drive, Blakelands, Milton Keynes MK14 5AN</p></td></tr>' +
-    '<tr><td><p style="font-size:12px;font-weight:bold;margin-bottom:10px">' +
+    '<tr><td><p style="font-weight:bold;font-size:12px;color:#1d1d1b;margin-bottom:10px 0 5px 0;">CUPRA & SEAT UK</p></td></tr>' +
+    '<tr><td><p style="font-size:12px;color:#666666;margin:0 0 5px 0">Yeomans Drive, Blakelands, Milton Keynes MK14 5AN</p></td></tr>' +
+    '<tr><td><p style="font-size:12px;font-weight:bold;margin-bottom:14px">' +
     '<a href="https://www.cupraofficial.co.uk" style="color:#474852;text-decoration:none;" target="_blank" rel="noopener noreferrer">CUPRA</a>' +
     '<span style="color:#000000;"> | </span>' +
     '<a href="https://www.seat.co.uk" style="color:#474852;text-decoration:none;" target="_blank" rel="noopener noreferrer">SEAT</a>' +
