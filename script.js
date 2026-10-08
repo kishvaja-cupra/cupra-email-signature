@@ -73,7 +73,7 @@ function buildSignature(logoSource) {
     : '';
   
   const availabilityRow = availabilityNote
-  ? '<tr style="height:20px;border-bottom:1px solid #a68a64"><td><div style="height:1px;border-bottom:1px solid #a68a64;margin:0 0 16px 0;">&nbsp;</div><div style="font-size:11px;color:#666666;"><span style="font-weight:bold">Working hours / Upcoming leave</span><br>'
+  ? '<tr style="height:20px"><td style="border-bottom:1px solid #a68a64"><div style="font-size:11px;color:#666666;"><span style="font-weight:bold">Working hours / Upcoming leave</span><br>'
       + escapeHtml(availabilityNote).replace(/\n/g, '<br>')
       + '</td></tr></div>'
   : '';
@@ -86,7 +86,7 @@ function buildSignature(logoSource) {
     buildProductRow('SEAT', seat) +
     buildCustomResponsibilities(customProducts) +
     phoneRow +
-    '<tr style="border-bottom:1px solid #a68a64"><td>&nbsp;</td></tr>' +
+    '<tr><td style="border-bottom:1px solid #a68a64">&nbsp;</td></tr>' +
     '<tr><td><div><img src="' + logoSource + '" width="156" height="66" alt="CUPRA and SEAT" style="display:block;width:156px;height:66px;border:0;outline:none;text-decoration:none;"></div></td></tr>' +
     '<tr style="height:20px"><td><div style="font-weight:bold;font-size:12px;color:#1d1d1b;margin-bottom:0;">CUPRA & SEAT UK</div></td></tr>' +
     '<tr style="height:20px"><td><div style="font-size:12px;color:#666666;">Yeomans Drive, Blakelands, Milton Keynes MK14 5AN</div></td></tr>' +
