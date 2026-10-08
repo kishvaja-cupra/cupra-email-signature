@@ -46,7 +46,7 @@ function buildProductRow(brand, products) {
   if (!products.length) return '';
   const brandColour = brand === 'CUPRA' ? '#474852' : '#474852';
   const marginBottom = brand === 'CUPRA' ? '5px' : '10px';
-  return '<tr><td><p style="font-size:12px;margin 0 0 ' + marginBottom + '0 0">' +
+  return '<tr><td><p style="font-size:12px;margin 0 0 ${marginBottom} 0">' +
     '<span style="color:' + brandColour + ';font-size:12px;font-weight:bold;">&#x258C;' + brand + '</span>' +
     '<span style="color:#1d1d1b;">&nbsp;' + products.map(escapeHtml).join(' | ') + '</span>' +
     '</p></td></tr>';
