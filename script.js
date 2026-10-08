@@ -88,7 +88,7 @@ function buildSignature(logoSource) {
     phoneRow +
     '<tr><td style="border-top:1px solid #a68a64"><p style="font-size:10px;margin:0">&nbsp;</td></tr>' +
     '<tr><td><div><img src="' + logoSource + '" width="156" height="66" alt="CUPRA and SEAT" style="display:block;width:156px;height:66px;border:0;outline:none;text-decoration:none;"></div></td></tr>' +
-    '<tr><td><p style="font-weight:bold;font-size:12px;color:#1d1d1b;margin-bottom:10px 0 5px 0;">CUPRA & SEAT UK</p></td></tr>' +
+    '<tr><td><p style="font-weight:bold;font-size:12px;color:#1d1d1b;margin-bottom:0 0 2px 0;">CUPRA & SEAT UK</p></td></tr>' +
     '<tr><td><p style="font-size:12px;color:#666666;margin:0 0 5px 0">Yeomans Drive, Blakelands, Milton Keynes MK14 5AN</p></td></tr>' +
     '<tr><td><p style="font-size:12px;font-weight:bold;margin-bottom:14px">' +
     '<a href="https://www.cupraofficial.co.uk" style="color:#474852;text-decoration:none;" target="_blank" rel="noopener noreferrer">CUPRA</a>' +
