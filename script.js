@@ -78,7 +78,7 @@ function buildSignature(logoSource) {
       + '</p></td></tr>'
   : '';
 
-  return '<p>&nbsp;</p><table role="presentation" style="font-family:Cupra, Aptos, Arial, sans-serif;color:#1d1d1b;line-height:1.4;border-collapse:collapse;" border="0" cellspacing="0" cellpadding="0">' +
+  return '<p style="margin:0">&nbsp;</p><table role="presentation" style="font-family:Cupra, Aptos, Arial, sans-serif;color:#1d1d1b;line-height:1.4;border-collapse:collapse;" border="0" cellspacing="0" cellpadding="0">' +
     '<tbody><tr><td style="padding:0;">' +
     '<tr><td><p style="font-size:20px;font-weight:bold;color:#1d1d1b;text-transform:capitalize;margin:0 0 2px 0">' + escapeHtml(name) + '</p></td></tr>' +
     '<tr style="height:30px;vertical-align:top"><td><p style="font-size:12px;color:#666666;text-transform:capitalize;margin:0 0 12px 0">' + escapeHtml(jobTitle) + '</p></td></tr>' +
@@ -96,7 +96,7 @@ function buildSignature(logoSource) {
     '<a href="https://www.seat.co.uk" style="color:#474852;text-decoration:none;" target="_blank" rel="noopener noreferrer">SEAT</a>' +
     '</p></td></tr>' +
     availabilityRow +
-    '</td></tr></tbody></table><p>&nbsp;</p>';
+    '</td></tr></tbody></table><p style="margin:0">&nbsp;</p>';
 }
 
 function validateField(input, errorId, message) {
